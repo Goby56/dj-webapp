@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static '/public/css/styles.css' %}">
+    <link rel="stylesheet" href="{% static '/public/css/home.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <title>{% block title %}DJ WEBAPP{% endblock %}</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div id="nav-left">
+            <h1 id="logo-text">&ltdev&gt Share &lt/dev&gt</h1>
+            <ul class="icon-container align-left">
+                <li><a href="/">
+                    <i data-feather="home"></i>
+                </a></li>
+                <li><a href="/admin">
+                    <i data-feather="database"></i>
+                </a></li>
+            </ul>
+        </div>
+        <div id="nav-search">
+            <input class="glass" type="text" name="search-field" id="nav-search-field" placeholder="Search for something">
+        </div>
+        <div id="nav-right">
+            <h1 id="logo-text">&ltusername&gt</h1>
+            <ul class="icon-container align-right">
+                <li><a href="/user">
+                    <i data-feather="user"></i>
+                </a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="content">
+        <div class="feed">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+    <script>
+        feather.replace()
+    </script>
+</body>
+</html>

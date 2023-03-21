@@ -1,0 +1,82 @@
+@import url("styles.css");
+
+.content {
+    display: flex;
+    justify-content: center;
+}
+
+.feed {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 10vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    background: linear-gradient(120deg, rgba(100, 100, 100, 0.3), rgba(100, 100, 100, 0.1));
+    backdrop-filter: blur(10px);
+    border-radius: 0 0 10px 10px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    
+}
+
+#nav-left {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    gap: 1rem;
+}
+
+#logo-text {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+#username-text {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+#nav-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#nav-search-field {
+    width: 80%;
+    height: 50%;
+    font-size: 1rem;
+    background-color: var(--white);
+    border-radius: 15px;
+    outline: none;
+    caret-shape: block;
+    transition: all 0.5s;
+    font-weight: 800;
+}
+
+#nav-search-field:hover {
+    width: 83%;
+}
+
+
+#nav-right {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    gap: 1rem;
+}

@@ -1,0 +1,24 @@
+{% extends "../base.html" %}
+{% load static %}
+<link rel="stylesheet" href="{% static '/public/css/feed.css' %}">
+{% block content%}
+
+{% for post in top_posts %}
+    <h1>{{ post.title }}</h1>
+    {% with content=post.get_content %}
+    {% if post.content_type == "IMAGE" %}
+        <img src="{% static content %}" alt="">
+    {% endif %}
+
+    {% if post.content_type == "SNIPPET" %}
+        
+    {% endif %}
+
+    {% if post.content_type == "TEXT" %}
+        
+    {% endif %}
+    {% endwith %}
+{% endfor %}
+
+
+{% endblock %}
