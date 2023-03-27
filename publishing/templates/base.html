@@ -4,6 +4,7 @@
 <head>
     <link rel="stylesheet" href="{% static '/public/css/styles.css' %}">
     <link rel="stylesheet" href="{% static '/public/css/home.css' %}">
+    <link rel="stylesheet" href="{% static '/public/css/feed.css' %}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     <script src="https://unpkg.com/feather-icons"></script>
     <title>{% block title %}DJ WEBAPP{% endblock %}</title>
@@ -36,6 +37,7 @@
     </nav>
     <div class="content">
         <div class="feed">
+            <div class="spacer"></div>
             {% block content %}{% endblock %}
         </div>
     </div>

@@ -1,11 +1,10 @@
 from django.db import models
 from django.contrib.auth.models import User
-from sympy import content
 
 # Create your models here.
 class Content(models.Model):
     snippet = models.TextField("Code Snippet", blank=True, max_length=2000)
-    image = models.ImageField(upload_to="static/images", blank=True, max_length=200)
+    image = models.ImageField(upload_to="images", blank=True, max_length=200)
     text = models.TextField("Plain Text", blank=True, max_length=2000)
 
     types = [("SNIPPET", "Snippet"), ("IMAGE", "Image"), ("TEXT", "Text")]

@@ -3,6 +3,7 @@
 .content {
     display: flex;
     justify-content: center;
+    padding-top: 10vh;
 }
 
 .feed {
@@ -10,6 +11,8 @@
     flex-direction: column;
     justify-content: left;
     align-items: center;
+
+    width: 60vw;
 }
 
 .navbar {
@@ -23,11 +26,10 @@
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     background: linear-gradient(120deg, rgba(100, 100, 100, 0.3), rgba(100, 100, 100, 0.1));
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(50px);
     border-radius: 0 0 10px 10px;
     border-bottom: 2px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    
 }
 
 #nav-left {
@@ -62,8 +64,9 @@
     background-color: var(--white);
     border-radius: 15px;
     outline: none;
+    text-align: center;
     caret-shape: block;
-    transition: all 0.5s;
+    transition: width 0.5s;
     font-weight: 800;
 }
 
