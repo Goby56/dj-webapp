@@ -3,10 +3,42 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
 .post img {
     border-radius: 10px;
     width: 100%;
     background-size: contain;
+}
+
+#post-creation-box {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0 10px 0  ;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+#create-post-field {
+    width: 80%;
+    height: 3rem;
+    font-size: 1rem;
+    background-color: var(--white);
+    border-radius: 10px;
+    outline: none;
+    text-align: center;
+    caret-shape: block;
+    transition: width 0.5s;
+    font-weight: 800;
+}
+
+#create-post-field svg{
+    width: 2rem;
+    height: 2rem
 }

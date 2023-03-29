@@ -1,9 +1,25 @@
 {% extends "../base.html" %}
 {% load static %}
-{% block content%}
-
+{% block content %}
+<div class="glass" id="post-creation-box">
+    
+    <ul class="icon-container">
+        <li><a href="/profile">
+            <i data-feather="user"></i>
+        </a></li>
+        <li>
+            <input class="" type="text" id="create-post-field" placeholder="Create something">
+        </li>
+        <li><a href="/submit?type=image">
+            <i data-feather="image"></i>
+        </a></li>
+        <li><a href="/submit?type=snippet">
+            <i data-feather="code"></i>
+        </a></li>
+    </ul>
+</div>
 {% for post in top_posts %}
-    <div class="post">
+    <div class="post glass">
         <h1>{{ post.title }}</h1>
         {% with content=post.get_content %}
         {% if post.content_type == "IMAGE" %}
@@ -11,7 +27,7 @@
         {% endif %}
 
         {% if post.content_type == "SNIPPET" %}
-            
+            {% block snippet %}{% endblock %}
         {% endif %}
 
         {% if post.content_type == "TEXT" %}
